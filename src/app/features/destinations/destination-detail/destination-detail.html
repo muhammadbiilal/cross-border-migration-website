@@ -1,0 +1,17 @@
+@if (destination(); as place) {
+  <app-page-hero [eyebrow]="place.region" [title]="place.name" [lede]="place.summary" />
+  <section class="section">
+    <div class="container">
+      <h2>Routes we prepare</h2>
+      <ul>
+        @for (pathway of place.pathways; track pathway) {
+          <li>{{ pathway }}</li>
+        }
+      </ul>
+      <a class="btn btn-primary" routerLink="/contact">Check this country</a>
+    </div>
+  </section>
+  <app-cta-band />
+} @else {
+  <app-page-hero title="Destination not found" lede="That country is not listed." />
+}

@@ -1,0 +1,12 @@
+<app-page-hero
+  eyebrow="Services"
+  title="What we prepare"
+  lede="Pick the pathway closest to your goal. The assessment confirms whether it is actually open."
+/>
+<section class="section">
+  <div class="container card-grid">
+    @for (service of services; track service.slug) {
+      <app-service-card [service]="service" />
+    }
+  </div>
+</section>

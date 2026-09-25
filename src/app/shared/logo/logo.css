@@ -1,0 +1,41 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+}
+
+.logo.light {
+  color: #f4f1ea;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+.word {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+strong {
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 560;
+  letter-spacing: -0.03em;
+}
+
+small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.light small {
+  color: #b7c4bc;
+}

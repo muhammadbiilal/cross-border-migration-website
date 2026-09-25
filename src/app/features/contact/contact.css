@@ -1,0 +1,35 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+aside {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+aside a {
+  color: var(--accent-dark);
+  font-weight: 700;
+}
+
+.section {
+  padding-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

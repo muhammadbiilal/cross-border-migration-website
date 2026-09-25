@@ -1,0 +1,48 @@
+<div class="bar">
+  <h1>Inquiries</h1>
+  <button type="button" class="btn btn-ghost" (click)="signOut()">Sign out</button>
+</div>
+
+@if (error()) {
+  <p class="notice notice-error">{{ error() }}</p>
+}
+
+<div class="layout">
+  <ul>
+    @for (row of rows(); track row.id) {
+      <li>
+        <button type="button" (click)="choose(row)" [class.active]="selected()?.id === row.id">
+          <strong>{{ row.name }}</strong>
+          <span>{{ row.service }} · {{ row.destination }}</span>
+          <span>{{ row.status }} · {{ row.created_at | date: 'medium' }}</span>
+        </button>
+      </li>
+    } @empty {
+      <li class="empty">No assessments yet.</li>
+    }
+  </ul>
+
+  @if (selected(); as row) {
+    <form (ngSubmit)="save()">
+      <p><a [href]="'mailto:' + row.email">{{ row.email }}</a></p>
+      <p>{{ row.phone }}</p>
+      <p>{{ row.message }}</p>
+      <label class="field">
+        Status
+        <select [(ngModel)]="status" name="status">
+          <option value="new">New</option>
+          <option value="contacted">Contacted</option>
+          <option value="closed">Closed</option>
+        </select>
+      </label>
+      <label class="field">
+        Internal note
+        <textarea rows="4" [(ngModel)]="note" name="note"></textarea>
+      </label>
+      <button class="btn btn-primary" type="submit">Save</button>
+      @if (saved()) {
+        <p class="notice">Saved.</p>
+      }
+    </form>
+  }
+</div>

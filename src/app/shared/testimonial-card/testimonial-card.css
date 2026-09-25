@@ -1,0 +1,23 @@
+figure {
+  margin: 0;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--surface);
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+strong {
+  color: var(--ink);
+}

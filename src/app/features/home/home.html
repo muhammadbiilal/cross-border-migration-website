@@ -1,0 +1,108 @@
+<section class="hero">
+  <div class="container">
+    <p class="eyebrow">Immigration consultancy</p>
+    <h1>{{ site.tagline }}</h1>
+    <p class="lede">
+      Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
+      <a class="btn btn-ghost" routerLink="/services">See services</a>
+    </div>
+    <ul class="stats">
+      @for (stat of stats; track stat.label) {
+        <li>
+          <strong>{{ stat.value }}</strong>
+          <span>{{ stat.label }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Services</h2>
+      <p>Eight pathways. Each page lists what we prepare and what we do not promise.</p>
+    </div>
+    <div class="card-grid">
+      @for (service of services; track service.slug) {
+        <app-service-card [service]="service" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section destinations">
+  <div class="container">
+    <div class="section-head">
+      <h2>Destinations</h2>
+      <p>Europe, North America, and Oceania. The route depends on the country, not a single global visa.</p>
+    </div>
+    <div class="card-grid">
+      @for (destination of destinations; track destination.slug) {
+        <app-country-card [destination]="destination" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Four steps</h2>
+      <p>You know the pathway, the papers, the timing, and the fee before the file is lodged.</p>
+    </div>
+    <ol class="steps">
+      @for (item of process; track item.step) {
+        <li>
+          <span>{{ item.step }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<section class="section reasons">
+  <div class="container">
+    <div class="section-head">
+      <h2>Why people stay with the file</h2>
+    </div>
+    <div class="card-grid">
+      @for (reason of reasons; track reason.title) {
+        <article>
+          <h3>{{ reason.title }}</h3>
+          <p>{{ reason.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>What clients describe</h2>
+      <p>Sample notes until real reviews are added. They are not claimed case results.</p>
+    </div>
+    <div class="card-grid">
+      @for (item of testimonials; track item.detail) {
+        <app-testimonial-card [quote]="item.quote" [name]="item.name" [detail]="item.detail" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <div class="section-head">
+      <h2>Questions</h2>
+    </div>
+    <app-faq-list [items]="faqs" />
+  </div>
+</section>
+
+<app-cta-band />

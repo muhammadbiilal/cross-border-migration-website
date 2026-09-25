@@ -1,0 +1,82 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: var(--nav-height);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+.header.scrolled {
+  border-bottom-color: var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 1rem;
+}
+
+.brand {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 640;
+}
+
+.menu {
+  display: none;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+nav a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: inline-flex;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding: 0.75rem 1rem 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.45rem 0.2rem;
+  }
+}

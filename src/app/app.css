@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 40;
+  padding: 0.4rem 0.75rem;
+  background: #fff;
+  border-radius: 0.5rem;
+}
+
+.skip:focus {
+  top: 0.5rem;
+}

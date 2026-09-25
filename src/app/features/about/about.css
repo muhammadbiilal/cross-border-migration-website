@@ -1,0 +1,36 @@
+.narrow {
+  max-width: 42rem;
+}
+
+.narrow p {
+  color: var(--muted);
+}
+
+ol {
+  margin: 1.25rem 0 0;
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.7rem;
+}
+
+.reasons {
+  padding-top: 0;
+}
+
+article {
+  padding: 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.3rem;
+}
+
+article p {
+  color: var(--muted);
+}

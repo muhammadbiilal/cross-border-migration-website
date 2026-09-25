@@ -1,0 +1,16 @@
+@if (service(); as item) {
+  <app-page-hero eyebrow="Service" [title]="item.title" [lede]="item.lead" />
+  <section class="section">
+    <div class="container">
+      <ul>
+        @for (point of item.points; track point) {
+          <li>{{ point }}</li>
+        }
+      </ul>
+      <a class="btn btn-primary" routerLink="/contact">Ask about this pathway</a>
+    </div>
+  </section>
+  <app-cta-band />
+} @else {
+  <app-page-hero title="Service not found" lede="That pathway is not listed." />
+}

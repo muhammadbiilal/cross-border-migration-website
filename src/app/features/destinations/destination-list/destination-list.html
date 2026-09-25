@@ -1,0 +1,12 @@
+<app-page-hero
+  eyebrow="Destinations"
+  title="Where the file is going"
+  lede="Ten countries. Each page names the routes we actually prepare for that place."
+/>
+<section class="section">
+  <div class="container card-grid">
+    @for (destination of destinations; track destination.slug) {
+      <app-country-card [destination]="destination" />
+    }
+  </div>
+</section>

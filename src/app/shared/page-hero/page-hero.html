@@ -1,0 +1,11 @@
+<section class="hero">
+  <div class="container">
+    @if (eyebrow()) {
+      <p class="eyebrow">{{ eyebrow() }}</p>
+    }
+    <h1>{{ title() }}</h1>
+    @if (lede()) {
+      <p class="lede">{{ lede() }}</p>
+    }
+  </div>
+</section>

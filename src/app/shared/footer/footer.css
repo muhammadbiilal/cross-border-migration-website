@@ -1,0 +1,44 @@
+.footer {
+  background: var(--ink);
+  color: #d7e2e4;
+  padding: 3rem 0 1.5rem;
+}
+
+.tagline {
+  margin: 0.85rem 0 0;
+  max-width: 22rem;
+  color: #b7c4bc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+}
+
+nav,
+address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-style: normal;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.legal {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

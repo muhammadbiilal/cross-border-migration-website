@@ -1,0 +1,11 @@
+<a class="skip" href="#main">Skip to content</a>
+@if (chrome()) {
+  <app-header />
+}
+<main id="main" tabindex="-1">
+  <router-outlet />
+</main>
+@if (chrome()) {
+  <app-footer />
+  <app-whatsapp-float />
+}

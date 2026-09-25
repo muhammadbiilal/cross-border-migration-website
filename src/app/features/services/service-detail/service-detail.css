@@ -1,0 +1,13 @@
+ul {
+  margin: 0 0 1.5rem;
+  padding-left: 1.2rem;
+  max-width: 36rem;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+.section {
+  padding-top: 0.5rem;
+}

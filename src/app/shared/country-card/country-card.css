@@ -1,0 +1,26 @@
+.card {
+  display: block;
+  height: 100%;
+  padding: 1.15rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+span {
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0.2rem 0 0.4rem;
+}
+
+p {
+  color: var(--muted);
+}

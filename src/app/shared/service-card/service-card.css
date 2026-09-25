@@ -1,0 +1,22 @@
+.card {
+  display: block;
+  height: 100%;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.25rem;
+}
+
+p {
+  color: var(--muted);
+}

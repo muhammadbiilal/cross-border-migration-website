@@ -1,0 +1,30 @@
+.band {
+  padding: 0 0 4.5rem;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  background: var(--ink);
+  color: #f4f1ea;
+}
+
+h2 {
+  margin: 0 0 0.4rem;
+}
+
+p {
+  color: #d7e2e4;
+  max-width: 36rem;
+}
+
+@media (max-width: 700px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

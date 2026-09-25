@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="container grid">
+    <div>
+      <app-logo tone="light" />
+      <p class="tagline">{{ site.tagline }}</p>
+    </div>
+    <nav>
+      @for (link of links; track link.path) {
+        <a [routerLink]="link.path">{{ link.label }}</a>
+      }
+    </nav>
+    <address>
+      <a [href]="site.phoneHref">{{ site.phone }}</a>
+      <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+      <span>{{ site.address }}</span>
+      <span>{{ site.hours }}</span>
+    </address>
+  </div>
+  <div class="container legal">
+    <span>© {{ year }} {{ site.name }}</span>
+    <a routerLink="/privacy">Privacy</a>
+    <a routerLink="/terms">Terms</a>
+  </div>
+</footer>
