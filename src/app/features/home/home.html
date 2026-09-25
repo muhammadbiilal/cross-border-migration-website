@@ -1,13 +1,15 @@
 <section class="hero">
-  <div class="container">
-    <p class="eyebrow">Immigration consultancy</p>
-    <h1>{{ site.tagline }}</h1>
-    <p class="lede">
-      Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
-    </p>
-    <div class="actions">
-      <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
-      <a class="btn btn-ghost" routerLink="/services">See services</a>
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Immigration consultancy</p>
+      <h1>{{ site.tagline }}</h1>
+      <p class="lede">
+        Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
+        <a class="btn btn-ghost" routerLink="/services">See services</a>
+      </div>
     </div>
     <ul class="stats">
       @for (stat of stats; track stat.label) {

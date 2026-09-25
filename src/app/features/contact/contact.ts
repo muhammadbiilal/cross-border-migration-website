@@ -36,7 +36,7 @@ export class Contact {
     phone: ['', [Validators.required, Validators.maxLength(40)]],
     service: ['', Validators.required],
     destination: ['', Validators.required],
-    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(5000)]],
+    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(4000)]],
   });
 
   constructor() {
