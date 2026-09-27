@@ -62,7 +62,7 @@
         {{ status() === 'sending' ? 'Sending…' : 'Send assessment' }}
       </button>
       @if (status() === 'sent') {
-        <p class="notice">Received. We will reply to the email you entered.</p>
+        <p class="notice notice-success">Received. We will reply to the email you entered.</p>
       }
       @if (status() === 'failed') {
         <p class="notice notice-error">{{ error() }}</p>

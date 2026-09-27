@@ -3,8 +3,8 @@
   flex-direction: column;
   height: 100%;
   padding: 1.2rem 1.15rem 1.1rem;
-  background: #fff;
-  border: 1px solid #eceeee ;
+  background: var(--surface);
+  border: 1px solid var(--line);
   border-radius: 0.9rem;
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
@@ -31,9 +31,9 @@ p {
   align-self: flex-start;
   margin-top: auto;
   padding: 0.45rem 0.85rem;
-  border: 1px solid #eceeee;
+  border: 1px solid var(--line);
   border-radius: 0.7rem;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: 0.92rem;
   font-weight: 700;
 }

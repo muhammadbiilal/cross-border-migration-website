@@ -18,7 +18,7 @@ main:focus {
   top: -4rem;
   z-index: 40;
   padding: 0.4rem 0.75rem;
-  background: #fff;
+  background: var(--surface);
   border-radius: 0.5rem;
 }
 
