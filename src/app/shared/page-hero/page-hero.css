@@ -14,7 +14,7 @@ h1 {
 
 .eyebrow {
   margin: 0;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;

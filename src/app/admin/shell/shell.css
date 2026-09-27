@@ -1,7 +1,7 @@
 :host {
   display: block;
   min-height: 100vh;
-  background: #fff;
+  background: var(--surface);
 }
 
 .shell {
@@ -15,14 +15,14 @@ aside {
   flex-direction: column;
   gap: 0.35rem;
   padding: 1.25rem 0.9rem;
-  background: var(--accent);
-  color: #e7f4f4;
+  background: var(--accent-dark);
+  color: var(--on-accent-muted);
 }
 
 .brand {
   margin: 0 0.7rem 0.8rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--on-accent);
 }
 
 nav {
@@ -36,7 +36,7 @@ aside button {
   border: 0;
   border-radius: 0.6rem;
   background: transparent;
-  color: #e7f4f4;
+  color: var(--on-accent-muted);
   font: inherit;
   font-weight: 700;
   text-align: left;
@@ -48,7 +48,7 @@ aside a.active,
 aside a:hover,
 aside button:hover {
   background: rgba(255, 255, 255, 0.14);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .site,

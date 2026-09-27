@@ -3,7 +3,7 @@
   top: 0;
   z-index: 20;
   height: var(--nav-height);
-  background: #fff;
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
 }
 
@@ -48,23 +48,23 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 nav a.active {
-  color: var(--accent);
+  color: var(--accent-strong);
   font-weight: 800;
 }
 
 nav .btn-primary {
   min-height: 2.6rem;
   padding: 0.35rem 0.95rem;
-  color: #fff;
+  color: var(--on-accent);
   font-weight: 700;
 }
 
 nav .btn-primary:hover {
-  color: #fff;
+  color: var(--on-accent);
 }
 
 @media (max-width: 800px) {

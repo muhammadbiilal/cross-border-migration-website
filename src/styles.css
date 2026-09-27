@@ -1,16 +1,25 @@
 :root {
   --bg: #ffffff;
   --surface: #ffffff;
+  --surface-alt: #f4f8f8;
   --ink: #1a1c1c;
   --muted: #5e7074;
   --line: #e6eaea;
+  /* Form controls need 3:1 against their background (WCAG 1.4.11). */
+  --line-strong: #7d8f92;
   --accent: #397f81;
-  --accent-dark: #397f81;
+  /* Small accent text; --accent is only 4.3:1 on --cream. */
+  --accent-strong: #2f6f71;
+  --accent-dark: #2c6668;
   --accent-soft: #ecf4f6;
+  --on-accent: #ffffff;
+  --on-accent-muted: #d5eeee;
   --cream: #fbf6e8;
   --dot: #f3e4a4;
-  --signal: #397f81;
   --danger: #9f1239;
+  --danger-soft: #fff1f2;
+  --success: #166534;
+  --success-soft: #f0fdf4;
   --font-body: "Nunito", "Segoe UI", sans-serif;
   --font-heading: "Nunito", "Segoe UI", sans-serif;
   --nav-height: 5rem;
@@ -113,7 +122,7 @@ img {
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   box-shadow: 0 8px 18px rgba(57, 127, 129, 0.25);
 }
 
@@ -123,7 +132,7 @@ img {
 }
 
 .btn-ghost {
-  background: #fff;
+  background: var(--surface);
   border-color: var(--line);
   color: var(--ink);
 }
@@ -151,9 +160,9 @@ img {
 .field textarea {
   width: 100%;
   padding: 0.7rem 0.8rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 0.7rem;
-  background: #fff;
+  background: var(--surface);
   color: var(--ink);
   font: inherit;
   font-weight: 400;
@@ -172,8 +181,13 @@ img {
 }
 
 .notice-error {
-  background: #fff1f2;
+  background: var(--danger-soft);
   color: var(--danger);
+}
+
+.notice-success {
+  background: var(--success-soft);
+  color: var(--success);
 }
 
 .card {
@@ -198,7 +212,7 @@ img {
 }
 
 .section-alt {
-  background: var(--surface);
+  background: var(--surface-alt);
 }
 
 .prose {

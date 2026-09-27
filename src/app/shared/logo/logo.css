@@ -6,7 +6,7 @@
 }
 
 .logo.light {
-  color: #ffffff;
+  color: var(--on-accent);
 }
 
 svg {
@@ -37,5 +37,5 @@ small {
 }
 
 .light small {
-  color: #c5dddd;
+  color: var(--on-accent-muted);
 }

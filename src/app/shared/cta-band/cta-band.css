@@ -10,21 +10,21 @@
   padding: 1.75rem;
   border-radius: 1.25rem;
   background: var(--accent-dark);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 h2 {
   margin: 0 0 0.4rem;
-  color: #fff;
+  color: var(--on-accent);
 }
 
 p {
-  color: #d5eeee;
+  color: var(--on-accent-muted);
   max-width: 36rem;
 }
 
 .inner .btn {
-  background: #fff;
+  background: var(--surface);
   color: var(--accent-dark);
   box-shadow: none;
 }

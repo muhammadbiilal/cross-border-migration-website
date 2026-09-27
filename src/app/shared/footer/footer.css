@@ -1,13 +1,13 @@
 .footer {
   background: var(--accent-dark);
-  color: #e7f4f4;
+  color: var(--on-accent);
   padding: 3rem 0 1.5rem;
 }
 
 .tagline {
   margin: 0.85rem 0 0;
   max-width: 22rem;
-  color: #c5dddd;
+  color: var(--on-accent-muted);
 }
 
 .grid {
@@ -25,7 +25,7 @@ address {
 }
 
 a:hover {
-  color: #fff;
+  text-decoration: underline;
 }
 
 .legal {

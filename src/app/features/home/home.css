@@ -52,7 +52,7 @@ h1 {
 
 .eyebrow {
   margin: 0;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -73,16 +73,16 @@ h1 {
 
 .process {
   background: var(--accent-dark);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .process h2 {
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .process .section-head p,
 .process .steps p {
-  color: #d5eeee;
+  color: var(--on-accent-muted);
 }
 
 .process .steps li {
@@ -91,7 +91,7 @@ h1 {
 }
 
 .process .steps span {
-  color: #fff;
+  color: var(--on-accent);
   font-size: 1.4rem;
 }
 
@@ -109,7 +109,7 @@ h1 {
 
 .destinations,
 .reasons {
-  background: var(--surface);
+  background: var(--surface-alt);
 }
 
 .steps {
@@ -130,7 +130,7 @@ h1 {
 }
 
 .steps span {
-  color: var(--accent);
+  color: var(--accent-strong);
   font-weight: 700;
 }
 
