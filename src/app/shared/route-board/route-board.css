@@ -27,17 +27,6 @@ img {
   border-radius: 0.35rem;
 }
 
-.diamond {
-  position: absolute;
-  z-index: 1;
-  top: -0.4rem;
-  left: -0.8rem;
-  width: 4rem;
-  height: 4rem;
-  background: var(--accent);
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-}
-
 .shade {
   padding: 1rem 0.2rem 0;
 }
