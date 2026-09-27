@@ -1,13 +1,58 @@
-<app-page-hero title="Privacy" lede="What we keep from the assessment form, and who can see it." />
+<app-page-hero
+  title="Privacy"
+  lede="How Cross Border Migration uses the details you send us, and who can see them."
+/>
 <section class="section prose">
   <div class="container">
+    <p>Last updated 27 September 2026.</p>
     <p>
-      The form asks for your name, email, phone, the service and country you are asking about, and a message.
-      We use that to reply. We do not sell it.
+      This page covers the Cross Border Migration website and the free assessment form. The desk is in Doha and works with Skyline Management Consultants, Peoples Migration, and Bright Way Future Migration.
     </p>
+
+    <h2>What we collect</h2>
+    <p>When you send the assessment form, we keep:</p>
+    <ul>
+      <li>Your name, email, and phone number</li>
+      <li>The service and country you ask about</li>
+      <li>The message you write</li>
+    </ul>
     <p>
-      Submissions are stored in our database. Only signed-in staff can read them. Visitors cannot see other people’s messages.
+      If you later write by email or WhatsApp, we keep that correspondence so the same consultant can stay on the file. We do not ask for passport scans or bank statements on this website.
     </p>
-    <p>To ask about a message you sent, email {{ site.email }}.</p>
+
+    <h2>How we use it</h2>
+    <p>We use those details to reply, to say which routes are open, and to prepare a written plan if you ask us to continue. We do not sell the list, and we do not use it for advertising from other companies.</p>
+    <p>
+      The form is stored in our database. Only a signed-in staff user can read it. Visitors cannot open someone else’s message.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      The public pages do not set a tracking or advertising cookie. If you sign in as staff, the browser keeps a session so the dashboard stays open. You can clear that in the browser.
+    </p>
+
+    <h2>How long we keep it</h2>
+    <p>
+      We keep an enquiry while it is open and for as long as we need it to answer you, finish a file, or meet a legal duty. Email {{ site.email }} if you want a message deleted and we have no reason to keep it.
+    </p>
+
+    <h2>Where it is stored</h2>
+    <p>
+      The site and the enquiry inbox are hosted for us. A copy can sit outside Qatar while it is stored or while a consultant replies. We still limit who can open it.
+    </p>
+
+    <h2>Children</h2>
+    <p>This site is for adults arranging a visa. We do not knowingly collect details from anyone under 18.</p>
+
+    <h2>Changes</h2>
+    <p>If this page changes, the new text is posted here and the date above is updated.</p>
+
+    <h2>Contact</h2>
+    <p>
+      {{ site.name }}<br />
+      {{ site.address }}<br />
+      <a [href]="site.phoneHref">{{ site.phone }}</a><br />
+      <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+    </p>
   </div>
 </section>

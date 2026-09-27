@@ -17,11 +17,12 @@
         <a
           [routerLink]="link.path"
           routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: link.path === '/' }"
           (click)="closeMenu()"
           >{{ link.label }}</a
         >
       }
-      <a class="btn btn-outline" routerLink="/contact" (click)="closeMenu()">Contact <span aria-hidden="true">→</span></a>
+      <a class="btn btn-primary" routerLink="/contact" (click)="closeMenu()">Contact <span aria-hidden="true">→</span></a>
     </nav>
   </div>
 </header>

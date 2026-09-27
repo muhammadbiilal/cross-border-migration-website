@@ -1,12 +1,43 @@
-<app-page-hero title="Terms" lede="Using this website and sending an assessment." />
+<app-page-hero
+  title="Terms"
+  lede="Using this website, sending an assessment, and what we do not promise."
+/>
 <section class="section prose">
   <div class="container">
+    <p>Last updated 27 September 2026.</p>
     <p>
-      The pages describe services. They are not a promise that a visa will be granted, and they are not legal advice for your case.
+      These terms cover the Cross Border Migration website. The desk is at {{ site.address }}. By using the site or sending the form, you agree to them and to the <a routerLink="/privacy">privacy page</a>.
+    </p>
+
+    <h2>What the pages are</h2>
+    <p>
+      The service and country pages describe pathways we prepare: work, study, family, residence, visit, and related permits. They are general. They are not a legal opinion on your case, and they are not a promise that a visa, permit, or residence will be granted.
+    </p>
+
+    <h2>The assessment</h2>
+    <p>
+      Sending the form asks for a reply. It does not hire us. A paid engagement starts only after you accept a written plan that names the pathway, the documents, the timing, and the fee.
     </p>
     <p>
-      Sending the form asks for a reply. A paid engagement starts only after you accept a written plan that names the pathway, documents, timing, and fee.
+      You agree that the name, contact details, and facts you send are yours to share and are accurate as far as you know. A file built on wrong facts can be refused, and we can stop work if that comes to light.
     </p>
-    <p>Questions about these terms: {{ site.email }}.</p>
+
+    <h2>Decisions we do not control</h2>
+    <p>
+      Embassies, immigration departments, employers, and schools make their own decisions. Processing times and rules change. We prepare the file and follow it up. We do not control the outcome, and a fee for preparation is not a fee for an approval.
+    </p>
+
+    <h2>Other websites</h2>
+    <p>
+      Links to WhatsApp, email, or a government site leave this website. Those services have their own terms and privacy rules. We are not responsible for them.
+    </p>
+
+    <h2>Changes</h2>
+    <p>We can update these terms by posting the new text on this page. The date at the top shows when that last happened.</p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about these terms: <a [href]="'mailto:' + site.email">{{ site.email }}</a> or <a [href]="site.phoneHref">{{ site.phone }}</a>.
+    </p>
   </div>
 </section>
