@@ -3,12 +3,21 @@
   right: 1rem;
   bottom: 1rem;
   z-index: 30;
-  padding: 0.7rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 999px;
   background: #128c7e;
   color: #fff;
-  font-weight: 700;
   box-shadow: var(--shadow);
+}
+
+.float svg {
+  width: 1.9rem;
+  height: 1.9rem;
+  fill: currentColor;
 }
 
 .float:hover {

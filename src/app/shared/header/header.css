@@ -47,23 +47,24 @@ nav a {
   font-weight: 600;
 }
 
-nav a.active,
 nav a:hover {
   color: var(--accent);
 }
 
-nav .btn-outline {
+nav a.active {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+nav .btn-primary {
   min-height: 2.6rem;
   padding: 0.35rem 0.95rem;
-  border-color: #d5d8d8;
-  background: #fff;
-  color: var(--ink);
+  color: #fff;
   font-weight: 700;
 }
 
-nav .btn-outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+nav .btn-primary:hover {
+  color: #fff;
 }
 
 @media (max-width: 800px) {
