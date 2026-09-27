@@ -69,9 +69,27 @@
       }
     </form>
     <aside>
-      <p><a [href]="site.phoneHref">{{ site.phone }}</a></p>
-      <p><a [href]="'mailto:' + site.email">{{ site.email }}</a></p>
-      <p>{{ site.address }}</p>
+      <h2>Offices</h2>
+      @for (office of offices; track office.name) {
+        <p>
+          <strong>{{ office.name }}</strong>
+          {{ office.address }}
+        </p>
+      }
+      <h2>Call</h2>
+      @for (phone of phones; track phone.href) {
+        <p>
+          <a [href]="phone.href">{{ phone.text }}</a>
+          <span>{{ phone.label }}</span>
+        </p>
+      }
+      <h2>Email</h2>
+      @for (email of emails; track email.href) {
+        <p>
+          <a [href]="email.href">{{ email.text }}</a>
+          <span>{{ email.label }}</span>
+        </p>
+      }
       <p>{{ site.hours }}</p>
     </aside>
   </div>

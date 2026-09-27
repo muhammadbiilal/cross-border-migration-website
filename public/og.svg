@@ -1,9 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#141816"/>
-  <rect x="72" y="72" width="88" height="88" rx="20" fill="#d6f25c"/>
-  <path d="M94 116h22M122 116h22M116 94v44" fill="none" stroke="#141816" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="116" cy="116" r="5" fill="#141816"/>
-  <text x="72" y="280" fill="#f4f1ea" font-family="Georgia, serif" font-size="84">Cross Border</text>
-  <text x="72" y="360" fill="#d6f25c" font-family="Arial, sans-serif" font-size="36" letter-spacing="8">MIGRATION</text>
-  <text x="72" y="470" fill="#b7c4bc" font-family="Arial, sans-serif" font-size="32">Work, study, and family visas with a written plan.</text>
+  <rect width="1200" height="630" fill="#397f81"/>
+  <rect x="72" y="72" width="88" height="88" rx="22" fill="#397f81"/>
+  <path d="M116 90 150 124 116 158 82 124Z" fill="#fff"/>
+  <text x="72" y="280" fill="#ffffff" font-family="Arial, sans-serif" font-size="84" font-weight="700">Cross Border</text>
+  <text x="72" y="360" fill="#d5eeee" font-family="Arial, sans-serif" font-size="36" letter-spacing="6">MIGRATION</text>
+  <text x="72" y="470" fill="#e7f4f4" font-family="Arial, sans-serif" font-size="32">Work, study, and family visas with a written plan.</text>
 </svg>

@@ -3,13 +3,12 @@
   top: 0;
   z-index: 20;
   height: var(--nav-height);
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(10px);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
 }
 
 .header.scrolled {
-  border-bottom-color: var(--line);
+  box-shadow: var(--shadow);
 }
 
 .bar {
@@ -50,7 +49,12 @@ nav a {
 
 nav a.active,
 nav a:hover {
-  color: var(--ink);
+  color: var(--accent);
+}
+
+nav .btn-primary,
+nav .btn-primary:hover {
+  color: #fff;
 }
 
 @media (max-width: 800px) {

@@ -4,7 +4,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { DESTINATIONS } from '../../core/data/destinations.data';
 import { SERVICES } from '../../core/data/services.data';
-import { SITE } from '../../core/data/site.data';
+import { EMAILS, OFFICES, PHONES, SITE } from '../../core/data/site.data';
 import { InquiriesService } from '../../core/services/inquiries.service';
 import { SupabaseService } from '../../core/services/supabase.service';
 import { PageHero } from '../../shared/page-hero/page-hero';
@@ -23,6 +23,9 @@ export class Contact {
   private readonly supabase = inject(SupabaseService);
 
   protected readonly site = SITE;
+  protected readonly offices = OFFICES;
+  protected readonly phones = PHONES;
+  protected readonly emails = EMAILS;
   protected readonly services = SERVICES;
   protected readonly destinations = DESTINATIONS;
   protected readonly configured = this.supabase.configured;

@@ -1,5 +1,8 @@
 <a class="card" [routerLink]="['/services', service().slug]">
+  @if (index()) {
+    <span class="index">{{ index() | number: '2.0-0' }}</span>
+  }
   <h3>{{ service().title }}</h3>
   <p>{{ service().summary }}</p>
-  <span>View pathway</span>
+  <span class="more">View pathway</span>
 </a>

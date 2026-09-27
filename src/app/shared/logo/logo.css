@@ -6,7 +6,7 @@
 }
 
 .logo.light {
-  color: #f4f1ea;
+  color: #ffffff;
 }
 
 svg {
@@ -24,7 +24,7 @@ svg {
 strong {
   font-family: var(--font-heading);
   font-size: 1.02rem;
-  font-weight: 560;
+  font-weight: 800;
   letter-spacing: -0.03em;
 }
 
@@ -37,5 +37,5 @@ small {
 }
 
 .light small {
-  color: #b7c4bc;
+  color: #c5dddd;
 }

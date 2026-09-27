@@ -1,13 +1,13 @@
 .footer {
-  background: var(--ink);
-  color: #d7e2e4;
+  background: var(--accent-dark);
+  color: #e7f4f4;
   padding: 3rem 0 1.5rem;
 }
 
 .tagline {
   margin: 0.85rem 0 0;
   max-width: 22rem;
-  color: #b7c4bc;
+  color: #c5dddd;
 }
 
 .grid {
