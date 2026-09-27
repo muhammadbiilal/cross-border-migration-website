@@ -14,9 +14,14 @@
     </button>
     <nav id="site-nav" [class.open]="menuOpen()">
       @for (link of links; track link.path) {
-        <a [routerLink]="link.path" routerLinkActive="active" (click)="closeMenu()">{{ link.label }}</a>
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+          >{{ link.label }}</a
+        >
       }
-      <a class="btn btn-primary" routerLink="/contact" (click)="closeMenu()">Free assessment</a>
+      <a class="btn btn-outline" routerLink="/contact" (click)="closeMenu()">Contact <span aria-hidden="true">→</span></a>
     </nav>
   </div>
 </header>

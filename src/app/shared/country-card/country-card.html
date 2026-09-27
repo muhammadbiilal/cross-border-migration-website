@@ -1,5 +1,6 @@
 <a class="card" [routerLink]="['/destinations', destination().slug]">
-  <span>{{ destination().region }}</span>
+  <img [src]="'images/destinations/' + destination().slug + '.jpg'" [alt]="destination().name" />
+  <span class="region">{{ destination().region }}</span>
   <h3>{{ destination().name }}</h3>
   <p>{{ destination().summary }}</p>
 </a>

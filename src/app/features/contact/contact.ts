@@ -2,8 +2,7 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { DESTINATIONS } from '../../core/data/destinations.data';
-import { SERVICES } from '../../core/data/services.data';
+import { ContentService } from '../../core/services/content.service';
 import { SITE } from '../../core/data/site.data';
 import { InquiriesService } from '../../core/services/inquiries.service';
 import { SupabaseService } from '../../core/services/supabase.service';
@@ -21,10 +20,14 @@ type Status = 'idle' | 'sending' | 'sent' | 'failed';
 export class Contact {
   private readonly inquiries = inject(InquiriesService);
   private readonly supabase = inject(SupabaseService);
+  private readonly content = inject(ContentService);
 
   protected readonly site = SITE;
-  protected readonly services = SERVICES;
-  protected readonly destinations = DESTINATIONS;
+  protected readonly offices = this.content.offices;
+  protected readonly phones = this.content.phones;
+  protected readonly emails = this.content.emails;
+  protected readonly services = this.content.services;
+  protected readonly destinations = this.content.destinations;
   protected readonly configured = this.supabase.configured;
   protected readonly status = signal<Status>('idle');
   protected readonly error = signal('');
@@ -36,7 +39,7 @@ export class Contact {
     phone: ['', [Validators.required, Validators.maxLength(40)]],
     service: ['', Validators.required],
     destination: ['', Validators.required],
-    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(5000)]],
+    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(4000)]],
   });
 
   constructor() {

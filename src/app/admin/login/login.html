@@ -1,5 +1,6 @@
 <div class="wrap">
   <form [formGroup]="form" (ngSubmit)="submit()">
+    <a routerLink="/" aria-label="Cross Border Migration"><app-logo /></a>
     <h1>Staff sign-in</h1>
     <p>Accounts are created in Supabase. There is no public registration.</p>
     @if (!configured) {

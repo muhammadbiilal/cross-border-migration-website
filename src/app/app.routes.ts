@@ -1,7 +1,5 @@
 import { Routes } from '@angular/router';
 
-import { DESTINATIONS } from './core/data/destinations.data';
-import { SERVICES } from './core/data/services.data';
 import { PageSeo } from './core/services/seo.service';
 
 export interface RouteSeoData {
@@ -9,34 +7,6 @@ export interface RouteSeoData {
 }
 
 const brand = 'Cross Border Migration';
-
-const serviceRoutes: Routes = SERVICES.map((service) => ({
-  path: `services/${service.slug}`,
-  loadComponent: () =>
-    import('./features/services/service-detail/service-detail').then((m) => m.ServiceDetail),
-  data: {
-    slug: service.slug,
-    seo: {
-      title: `${service.title} | ${brand}`,
-      description: service.summary,
-    },
-  } satisfies RouteSeoData & { slug: string },
-}));
-
-const destinationRoutes: Routes = DESTINATIONS.map((destination) => ({
-  path: `destinations/${destination.slug}`,
-  loadComponent: () =>
-    import('./features/destinations/destination-detail/destination-detail').then(
-      (m) => m.DestinationDetail,
-    ),
-  data: {
-    slug: destination.slug,
-    seo: {
-      title: `${destination.name} | ${brand}`,
-      description: destination.summary,
-    },
-  } satisfies RouteSeoData & { slug: string },
-}));
 
 export const routes: Routes = [
   {
@@ -143,17 +113,73 @@ export const routes: Routes = [
   },
   {
     path: 'admin',
-    loadComponent: () => import('./admin/inquiries/inquiries').then((m) => m.Inquiries),
+    loadComponent: () => import('./admin/shell/shell').then((m) => m.AdminShell),
     data: {
       seo: {
-        title: `Inquiries | ${brand}`,
-        description: 'Assessment requests.',
+        title: `Dashboard | ${brand}`,
+        description: 'Staff dashboard.',
         noindex: true,
       },
     } satisfies RouteSeoData,
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./admin/overview/overview').then((m) => m.Overview),
+      },
+      {
+        path: 'inquiries',
+        loadComponent: () => import('./admin/inquiries/inquiries').then((m) => m.Inquiries),
+      },
+      {
+        path: 'services',
+        loadComponent: () => import('./admin/catalog/catalog').then((m) => m.Catalog),
+        data: { kind: 'services' },
+      },
+      {
+        path: 'destinations',
+        loadComponent: () => import('./admin/catalog/catalog').then((m) => m.Catalog),
+        data: { kind: 'destinations' },
+      },
+      {
+        path: 'faqs',
+        loadComponent: () => import('./admin/catalog/catalog').then((m) => m.Catalog),
+        data: { kind: 'faqs' },
+      },
+      {
+        path: 'testimonials',
+        loadComponent: () => import('./admin/catalog/catalog').then((m) => m.Catalog),
+        data: { kind: 'testimonials' },
+      },
+      {
+        path: 'contact',
+        loadComponent: () => import('./admin/contact-desk/contact-desk').then((m) => m.ContactDesk),
+      },
+    ],
   },
-  ...serviceRoutes,
-  ...destinationRoutes,
+  {
+    path: 'services/:slug',
+    loadComponent: () =>
+      import('./features/services/service-detail/service-detail').then((m) => m.ServiceDetail),
+    data: {
+      seo: {
+        title: `Service | ${brand}`,
+        description: 'A visa pathway prepared by Cross Border Migration.',
+      },
+    } satisfies RouteSeoData,
+  },
+  {
+    path: 'destinations/:slug',
+    loadComponent: () =>
+      import('./features/destinations/destination-detail/destination-detail').then(
+        (m) => m.DestinationDetail,
+      ),
+    data: {
+      seo: {
+        title: `Destination | ${brand}`,
+        description: 'Visa routes for one destination country.',
+      },
+    } satisfies RouteSeoData,
+  },
   {
     path: '404',
     loadComponent: () => import('./features/not-found/not-found').then((m) => m.NotFound),

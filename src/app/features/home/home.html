@@ -1,22 +1,35 @@
 <section class="hero">
   <div class="container">
-    <p class="eyebrow">Immigration consultancy</p>
-    <h1>{{ site.tagline }}</h1>
-    <p class="lede">
-      Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
-    </p>
-    <div class="actions">
-      <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
-      <a class="btn btn-ghost" routerLink="/services">See services</a>
+    <div class="panel">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Immigration consultancy</p>
+          <h1>Free consultation for the visa that fits.</h1>
+          <p class="lede">
+            Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
+          </div>
+        </div>
+        <app-route-board [destinations]="destinations()" />
+      </div>
     </div>
-    <ul class="stats">
-      @for (stat of stats; track stat.label) {
-        <li>
-          <strong>{{ stat.value }}</strong>
-          <span>{{ stat.label }}</span>
-        </li>
-      }
-    </ul>
+  </div>
+</section>
+
+<section class="section professionals">
+  <div class="container split">
+    <img class="portrait" src="images/consult.jpg" alt="A consultant reviewing a visa file with a client" />
+    <div>
+      <p class="eyebrow">The Doha desk</p>
+      <h2>We prepare the file, then stay on it.</h2>
+      <p class="lede">
+        Cross Border Migration is the Doha desk for Skyline, Peoples Migration, and Bright Way Future Migration.
+        You get one consultant, a written plan, and the document list before anything is lodged.
+      </p>
+      <a class="btn btn-primary" routerLink="/about">About the desk</a>
+    </div>
   </div>
 </section>
 
@@ -27,8 +40,8 @@
       <p>Eight pathways. Each page lists what we prepare and what we do not promise.</p>
     </div>
     <div class="card-grid">
-      @for (service of services; track service.slug) {
-        <app-service-card [service]="service" />
+      @for (service of services(); track service.slug; let i = $index) {
+        <app-service-card [service]="service" [index]="i + 1" />
       }
     </div>
   </div>
@@ -41,14 +54,14 @@
       <p>Europe, North America, and Oceania. The route depends on the country, not a single global visa.</p>
     </div>
     <div class="card-grid">
-      @for (destination of destinations; track destination.slug) {
+      @for (destination of destinations(); track destination.slug) {
         <app-country-card [destination]="destination" />
       }
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section process">
   <div class="container">
     <div class="section-head">
       <h2>Four steps</h2>
@@ -89,7 +102,7 @@
       <p>Sample notes until real reviews are added. They are not claimed case results.</p>
     </div>
     <div class="card-grid">
-      @for (item of testimonials; track item.detail) {
+      @for (item of testimonials(); track item.detail) {
         <app-testimonial-card [quote]="item.quote" [name]="item.name" [detail]="item.detail" />
       }
     </div>
@@ -101,7 +114,7 @@
     <div class="section-head">
       <h2>Questions</h2>
     </div>
-    <app-faq-list [items]="faqs" />
+    <app-faq-list [items]="faqs()" />
   </div>
 </section>
 

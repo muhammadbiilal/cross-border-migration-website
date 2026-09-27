@@ -12,4 +12,5 @@ import { ServiceItem } from '../../core/data/services.data';
 })
 export class ServiceCard {
   readonly service = input.required<ServiceItem>();
+  readonly index = input(0);
 }

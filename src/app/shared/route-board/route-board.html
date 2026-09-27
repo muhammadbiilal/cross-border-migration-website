@@ -1,0 +1,16 @@
+<aside class="board" aria-label="Destination routes">
+  <div class="frame">
+    <span class="diamond" aria-hidden="true"></span>
+    <img src="images/hero.jpg" alt="Aircraft wing above the clouds" />
+  </div>
+  <div class="shade">
+    <p class="label">Routes we prepare</p>
+    <ul>
+      @for (destination of destinations(); track destination.slug) {
+        <li>
+          <a [routerLink]="['/destinations', destination.slug]">{{ destination.name }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</aside>

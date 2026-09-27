@@ -9,17 +9,29 @@
   gap: 1.5rem;
   padding: 1.75rem;
   border-radius: 1.25rem;
-  background: var(--ink);
-  color: #f4f1ea;
+  background: var(--accent-dark);
+  color: #fff;
 }
 
 h2 {
   margin: 0 0 0.4rem;
+  color: #fff;
 }
 
 p {
-  color: #d7e2e4;
+  color: #d5eeee;
   max-width: 36rem;
+}
+
+.inner .btn {
+  background: #fff;
+  color: var(--accent-dark);
+  box-shadow: none;
+}
+
+.inner .btn:hover {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
 }
 
 @media (max-width: 700px) {

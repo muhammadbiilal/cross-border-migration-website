@@ -2,6 +2,11 @@
   <app-page-hero [eyebrow]="place.region" [title]="place.name" [lede]="place.summary" />
   <section class="section">
     <div class="container">
+      <img
+        class="photo"
+        [src]="'images/destinations/' + place.slug + '.jpg'"
+        [alt]="place.name"
+      />
       <h2>Routes we prepare</h2>
       <ul>
         @for (pathway of place.pathways; track pathway) {
@@ -12,6 +17,6 @@
     </div>
   </section>
   <app-cta-band />
-} @else {
+} @else if (loaded()) {
   <app-page-hero title="Destination not found" lede="That country is not listed." />
 }

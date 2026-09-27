@@ -1,0 +1,64 @@
+<section [class.stacked]="!standalone()">
+  @if (standalone()) {
+    <h1>{{ heading() }}</h1>
+  } @else {
+    <h2>{{ heading() }}</h2>
+  }
+
+  @if (error()) {
+    <p class="notice notice-error">{{ error() }}</p>
+  }
+
+  <div class="layout">
+    <div>
+      <button type="button" class="btn btn-primary" (click)="create()">New</button>
+      <ul>
+        @for (row of rows(); track row.key) {
+          <li>
+            <button type="button" (click)="choose(row)" [class.active]="activeKey() === row.key && !creating()">
+              {{ row.label }}
+            </button>
+          </li>
+        } @empty {
+          <li class="empty">Nothing here yet.</li>
+        }
+      </ul>
+    </div>
+
+    @if (draft(); as fields) {
+      <form (ngSubmit)="save()">
+        @for (field of fields; track field.key) {
+          <label class="field">
+            {{ field.label }}
+            @if (field.lines) {
+              <textarea
+                rows="4"
+                [name]="field.key"
+                [value]="field.value"
+                (input)="setField(field.key, $any($event.target).value)"
+              ></textarea>
+            } @else {
+              <input
+                [name]="field.key"
+                [value]="field.value"
+                (input)="setField(field.key, $any($event.target).value)"
+              />
+            }
+          </label>
+        }
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Save</button>
+          @if (activeKey() && !creating()) {
+            <button class="btn btn-ghost" type="button" (click)="remove()">Delete</button>
+          }
+          @if (page()) {
+            <a [routerLink]="page()">Open page</a>
+          }
+        </div>
+        @if (saved()) {
+          <p class="notice">Saved.</p>
+        }
+      </form>
+    }
+  </div>
+</section>

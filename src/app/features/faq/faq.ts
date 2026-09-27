@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
-import { FAQS } from '../../core/data/content.data';
+import { ContentService } from '../../core/services/content.service';
 import { FaqList } from '../../shared/faq-list/faq-list';
 import { PageHero } from '../../shared/page-hero/page-hero';
 
@@ -12,5 +12,5 @@ import { PageHero } from '../../shared/page-hero/page-hero';
   styleUrl: './faq.css',
 })
 export class Faq {
-  protected readonly faqs = FAQS;
+  protected readonly faqs = inject(ContentService).faqs;
 }

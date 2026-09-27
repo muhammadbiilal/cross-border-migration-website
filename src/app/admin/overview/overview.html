@@ -1,0 +1,9 @@
+<h1>Overview</h1>
+
+@if (error()) {
+  <p class="notice notice-error">{{ error() }}</p>
+} @else {
+  <p class="count">{{ fresh() }}</p>
+  <p>New inquiries, out of {{ total() }} in the inbox.</p>
+  <a class="btn btn-primary" routerLink="/admin/inquiries">Open inquiries</a>
+}

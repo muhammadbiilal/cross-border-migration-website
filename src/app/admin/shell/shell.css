@@ -1,0 +1,79 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 0.9rem;
+  background: var(--accent);
+  color: #e7f4f4;
+}
+
+.brand {
+  margin: 0 0.7rem 0.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+nav {
+  display: grid;
+  gap: 0.2rem;
+}
+
+aside a,
+aside button {
+  padding: 0.55rem 0.7rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background: transparent;
+  color: #e7f4f4;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+aside a.active,
+aside a:hover,
+aside button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.site,
+aside button {
+  margin-top: 0.6rem;
+}
+
+aside button {
+  margin-top: auto;
+}
+
+main {
+  padding: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  aside button {
+    margin-top: 0.6rem;
+  }
+
+  nav {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  }
+}

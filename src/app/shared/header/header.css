@@ -3,13 +3,12 @@
   top: 0;
   z-index: 20;
   height: var(--nav-height);
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  border-bottom: 1px solid transparent;
-  backdrop-filter: blur(10px);
+  background: #fff;
+  border-bottom: 1px solid var(--line);
 }
 
 .header.scrolled {
-  border-bottom-color: var(--line);
+  box-shadow: var(--shadow);
 }
 
 .bar {
@@ -23,7 +22,7 @@
 .brand {
   font-family: var(--font-heading);
   font-size: 1.15rem;
-  font-weight: 640;
+  font-weight: 800;
 }
 
 .menu {
@@ -50,7 +49,21 @@ nav a {
 
 nav a.active,
 nav a:hover {
+  color: var(--accent);
+}
+
+nav .btn-outline {
+  min-height: 2.6rem;
+  padding: 0.35rem 0.95rem;
+  border-color: #d5d8d8;
+  background: #fff;
   color: var(--ink);
+  font-weight: 700;
+}
+
+nav .btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 800px) {

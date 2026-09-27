@@ -23,7 +23,7 @@ export class SeoService {
 
     this.title.setTitle(seo.title);
     this.meta.updateTag({ name: 'description', content: seo.description });
-    this.meta.updateTag({ name: 'theme-color', content: '#141816' });
+    this.meta.updateTag({ name: 'theme-color', content: '#397f81' });
     this.meta.updateTag({
       name: 'robots',
       content: seo.noindex ? 'noindex, follow' : 'index, follow',
