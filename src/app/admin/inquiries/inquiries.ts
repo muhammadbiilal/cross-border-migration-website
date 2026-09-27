@@ -82,9 +82,4 @@ export class Inquiries {
     this.selected.set(next);
     this.saved.set(true);
   }
-
-  protected async signOut(): Promise<void> {
-    await this.supabase.signOut();
-    await this.router.navigate(['/login']);
-  }
 }

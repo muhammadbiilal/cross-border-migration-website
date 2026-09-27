@@ -5,7 +5,7 @@
 />
 <section class="section">
   <div class="container card-grid">
-    @for (destination of destinations; track destination.slug) {
+    @for (destination of destinations(); track destination.slug) {
       <app-country-card [destination]="destination" />
     }
   </div>

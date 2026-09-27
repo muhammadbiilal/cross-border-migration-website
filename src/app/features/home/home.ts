@@ -1,9 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { FAQS, PROCESS, TESTIMONIALS } from '../../core/data/content.data';
-import { DESTINATIONS } from '../../core/data/destinations.data';
-import { SERVICES } from '../../core/data/services.data';
+import { PROCESS } from '../../core/data/content.data';
+import { ContentService } from '../../core/services/content.service';
 import { REASONS } from '../../core/data/site.data';
 import { CountryCard } from '../../shared/country-card/country-card';
 import { CtaBand } from '../../shared/cta-band/cta-band';
@@ -20,10 +19,12 @@ import { TestimonialCard } from '../../shared/testimonial-card/testimonial-card'
   styleUrl: './home.css',
 })
 export class Home {
-  protected readonly services = SERVICES;
-  protected readonly destinations = DESTINATIONS;
+  private readonly content = inject(ContentService);
+
+  protected readonly services = this.content.services;
+  protected readonly destinations = this.content.destinations;
   protected readonly process = PROCESS;
   protected readonly reasons = REASONS;
-  protected readonly faqs = FAQS;
-  protected readonly testimonials = TESTIMONIALS;
+  protected readonly faqs = this.content.faqs;
+  protected readonly testimonials = this.content.testimonials;
 }

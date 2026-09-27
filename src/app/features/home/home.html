@@ -12,7 +12,7 @@
             <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
           </div>
         </div>
-        <app-route-board [destinations]="destinations" />
+        <app-route-board [destinations]="destinations()" />
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
       <p>Eight pathways. Each page lists what we prepare and what we do not promise.</p>
     </div>
     <div class="card-grid">
-      @for (service of services; track service.slug; let i = $index) {
+      @for (service of services(); track service.slug; let i = $index) {
         <app-service-card [service]="service" [index]="i + 1" />
       }
     </div>
@@ -54,7 +54,7 @@
       <p>Europe, North America, and Oceania. The route depends on the country, not a single global visa.</p>
     </div>
     <div class="card-grid">
-      @for (destination of destinations; track destination.slug) {
+      @for (destination of destinations(); track destination.slug) {
         <app-country-card [destination]="destination" />
       }
     </div>
@@ -102,7 +102,7 @@
       <p>Sample notes until real reviews are added. They are not claimed case results.</p>
     </div>
     <div class="card-grid">
-      @for (item of testimonials; track item.detail) {
+      @for (item of testimonials(); track item.detail) {
         <app-testimonial-card [quote]="item.quote" [name]="item.name" [detail]="item.detail" />
       }
     </div>
@@ -114,7 +114,7 @@
     <div class="section-head">
       <h2>Questions</h2>
     </div>
-    <app-faq-list [items]="faqs" />
+    <app-faq-list [items]="faqs()" />
   </div>
 </section>
 

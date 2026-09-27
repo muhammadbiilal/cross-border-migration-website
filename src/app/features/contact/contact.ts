@@ -2,9 +2,8 @@ import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/cor
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { DESTINATIONS } from '../../core/data/destinations.data';
-import { SERVICES } from '../../core/data/services.data';
-import { EMAILS, OFFICES, PHONES, SITE } from '../../core/data/site.data';
+import { ContentService } from '../../core/services/content.service';
+import { SITE } from '../../core/data/site.data';
 import { InquiriesService } from '../../core/services/inquiries.service';
 import { SupabaseService } from '../../core/services/supabase.service';
 import { PageHero } from '../../shared/page-hero/page-hero';
@@ -21,13 +20,14 @@ type Status = 'idle' | 'sending' | 'sent' | 'failed';
 export class Contact {
   private readonly inquiries = inject(InquiriesService);
   private readonly supabase = inject(SupabaseService);
+  private readonly content = inject(ContentService);
 
   protected readonly site = SITE;
-  protected readonly offices = OFFICES;
-  protected readonly phones = PHONES;
-  protected readonly emails = EMAILS;
-  protected readonly services = SERVICES;
-  protected readonly destinations = DESTINATIONS;
+  protected readonly offices = this.content.offices;
+  protected readonly phones = this.content.phones;
+  protected readonly emails = this.content.emails;
+  protected readonly services = this.content.services;
+  protected readonly destinations = this.content.destinations;
   protected readonly configured = this.supabase.configured;
   protected readonly status = signal<Status>('idle');
   protected readonly error = signal('');

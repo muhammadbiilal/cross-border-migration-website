@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 
-import { SERVICES } from '../../../core/data/services.data';
+import { ContentService } from '../../../core/services/content.service';
 import { PageHero } from '../../../shared/page-hero/page-hero';
 import { ServiceCard } from '../../../shared/service-card/service-card';
 
@@ -12,5 +12,5 @@ import { ServiceCard } from '../../../shared/service-card/service-card';
   styleUrl: './service-list.css',
 })
 export class ServiceList {
-  protected readonly services = SERVICES;
+  protected readonly services = inject(ContentService).services;
 }

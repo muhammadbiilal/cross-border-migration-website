@@ -33,7 +33,12 @@ export class App {
         map((event) => {
           let route = this.route;
           while (route.firstChild) route = route.firstChild;
-          return { url: event.urlAfterRedirects, data: route.snapshot.data as Partial<RouteSeoData> };
+          let data = route.snapshot.data as Partial<RouteSeoData>;
+          while (!data.seo && route.parent) {
+            route = route.parent;
+            data = route.snapshot.data as Partial<RouteSeoData>;
+          }
+          return { url: event.urlAfterRedirects, data };
         }),
         takeUntilDestroyed(),
       )

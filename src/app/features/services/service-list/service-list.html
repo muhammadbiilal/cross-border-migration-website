@@ -5,7 +5,7 @@
 />
 <section class="section">
   <div class="container card-grid">
-    @for (service of services; track service.slug) {
+    @for (service of services(); track service.slug) {
       <app-service-card [service]="service" />
     }
   </div>

@@ -12,6 +12,6 @@ Put the Supabase URL and anon key in `src/environments/environment.development.t
 
 ## Database
 
-Run `supabase/migrations/0001_inquiries.sql` in the Supabase SQL editor. Create the staff user in the Supabase dashboard. Public sign-up stays off.
+Run `supabase/migrations/0001_inquiries.sql` and `supabase/migrations/0002_content.sql` in the Supabase SQL editor. Create the staff user in the Supabase dashboard. Public sign-up stays off.
 
-Office phone, email, address, and WhatsApp live in `src/app/core/data/site.data.ts`.
+Until those keys are set, public pages use the copy in `src/app/core/data/`. After the content migration, `/admin` edits services, destinations, FAQs, testimonials, and the office contact lists.
