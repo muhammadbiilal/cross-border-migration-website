@@ -1,25 +1,20 @@
 <section class="hero">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Immigration consultancy</p>
-      <h1>Free consultation for the visa that fits.</h1>
-      <p class="lede">
-        Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
-        <a class="btn btn-ghost" routerLink="/services">See services</a>
+  <div class="container">
+    <div class="panel">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Immigration consultancy</p>
+          <h1>Free consultation for the visa that fits.</h1>
+          <p class="lede">
+            Work, study, family, residence, and visit visas. You get a written plan, a document list, and one consultant on the file.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
+          </div>
+        </div>
+        <app-route-board [destinations]="destinations" />
       </div>
-      <ul class="stats">
-        @for (stat of stats; track stat.label) {
-          <li>
-            <strong>{{ stat.value }}</strong>
-            <span>{{ stat.label }}</span>
-          </li>
-        }
-      </ul>
     </div>
-    <app-route-board [destinations]="destinations" />
   </div>
 </section>
 

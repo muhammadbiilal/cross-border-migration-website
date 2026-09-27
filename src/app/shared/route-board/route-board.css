@@ -1,33 +1,45 @@
 .board {
   position: relative;
-  overflow: hidden;
-  border-radius: 1.4rem;
-  background: #fff;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
 }
 
-.board::before {
+.frame {
+  position: relative;
+  padding: 0.4rem 0.9rem 0.9rem 0;
+}
+
+.frame::after {
   content: "";
   position: absolute;
-  z-index: 1;
-  top: 1.2rem;
-  right: 1.2rem;
-  width: 3.2rem;
-  height: 3.2rem;
-  background: var(--accent);
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  right: 0;
+  bottom: 0;
+  width: 78%;
+  height: 82%;
+  border-right: 10px solid var(--accent);
+  border-bottom: 10px solid var(--accent);
+  pointer-events: none;
 }
 
 img {
   display: block;
   width: 100%;
-  height: 22rem;
+  height: 18rem;
   object-fit: cover;
+  border-radius: 0.35rem;
+}
+
+.diamond {
+  position: absolute;
+  z-index: 1;
+  top: -0.4rem;
+  left: -0.8rem;
+  width: 4rem;
+  height: 4rem;
+  background: var(--accent);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
 .shade {
-  padding: 1rem 1.1rem 1.2rem;
+  padding: 1rem 0.2rem 0;
 }
 
 .label {
@@ -52,7 +64,7 @@ a {
   display: inline-flex;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  background: var(--accent-soft);
+  background: #fff;
   color: var(--accent-dark);
   font-size: 0.9rem;
   font-weight: 600;

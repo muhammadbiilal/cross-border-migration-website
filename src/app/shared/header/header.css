@@ -22,7 +22,7 @@
 .brand {
   font-family: var(--font-heading);
   font-size: 1.15rem;
-  font-weight: 640;
+  font-weight: 800;
 }
 
 .menu {
@@ -52,9 +52,18 @@ nav a:hover {
   color: var(--accent);
 }
 
-nav .btn-primary,
-nav .btn-primary:hover {
-  color: #fff;
+nav .btn-outline {
+  min-height: 2.6rem;
+  padding: 0.35rem 0.95rem;
+  border-color: #d5d8d8;
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+nav .btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 @media (max-width: 800px) {
