@@ -7,6 +7,10 @@
           <li>{{ point }}</li>
         }
       </ul>
+      @if (item.slug === 'european-work-permits') {
+        <h2>Countries we file for</h2>
+        <app-europe-permits [link]="false" />
+      }
       <a class="btn btn-primary" routerLink="/contact">Ask about this pathway</a>
     </div>
   </section>

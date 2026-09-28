@@ -1,0 +1,18 @@
+<div class="featured">
+  @for (country of featured; track country.name) {
+    <div class="country">
+      <span class="tag">In demand</span>
+      <h3>{{ country.name }}</h3>
+      <p>{{ country.note }}</p>
+    </div>
+  }
+</div>
+<p class="also">Also across the rest of the Schengen area</p>
+<ul class="chips">
+  @for (name of other; track name) {
+    <li>{{ name }}</li>
+  }
+</ul>
+@if (link()) {
+  <a class="btn btn-primary" routerLink="/services/european-work-permits">European work permits</a>
+}
