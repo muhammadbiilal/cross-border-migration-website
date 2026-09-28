@@ -10,10 +10,20 @@
       }
     </nav>
     <address>
-      <a [href]="site.phoneHref">{{ site.phone }}</a>
-      <a [href]="'mailto:' + site.email">{{ site.email }}</a>
-      <span>{{ site.address }}</span>
-      <span>{{ site.hours }}</span>
+      @if (site.phone) {
+        <a [href]="site.phoneHref">{{ site.phone }}</a>
+      } @else {
+        <span>Phone: -</span>
+      }
+      @if (site.email) {
+        <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+      } @else {
+        <span>Email: -</span>
+      }
+      <span>{{ site.address || 'Address: -' }}</span>
+      @if (site.hours) {
+        <span>{{ site.hours }}</span>
+      }
     </address>
   </div>
   <div class="container legal">
