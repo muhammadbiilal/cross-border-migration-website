@@ -21,7 +21,7 @@ export const NAV_LINKS = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About' },
   { path: '/services', label: 'Services' },
-  { path: '/destinations', label: 'Countries' },
+  { path: '/destinations', label: 'Destinations' },
   { path: '/faq', label: 'FAQ' },
 ] as const;
 

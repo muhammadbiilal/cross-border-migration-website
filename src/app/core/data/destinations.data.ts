@@ -8,6 +8,34 @@ export interface Destination {
 
 export const DESTINATIONS: Destination[] = [
   {
+    slug: 'spain',
+    name: 'Spain',
+    region: 'Europe',
+    summary: 'Work and residence permits for hired roles, plus the EU Blue Card for highly qualified ones.',
+    pathways: ['Employer-sponsored work and residence', 'EU Blue Card where the role qualifies', 'Family reunification after the main grant'],
+  },
+  {
+    slug: 'serbia',
+    name: 'Serbia',
+    region: 'Europe',
+    summary: 'Work, residence, and business routes for people starting activity in an emerging market.',
+    pathways: ['Work and residence permits', 'Business and investment stays', 'Founder setup alongside the permit'],
+  },
+  {
+    slug: 'czech-republic',
+    name: 'Czech Republic',
+    region: 'Europe',
+    summary: 'Employee cards for hired roles in manufacturing, logistics, construction, and technology.',
+    pathways: ['Employee card', 'EU Blue Card where the role qualifies', 'Family members filed with the worker'],
+  },
+  {
+    slug: 'bulgaria',
+    name: 'Bulgaria',
+    region: 'Europe',
+    summary: 'Single work and residence permits for hired roles, with the EU Blue Card for skilled ones.',
+    pathways: ['Single permit for work and residence', 'EU Blue Card where the role qualifies', 'Family reunification'],
+  },
+  {
     slug: 'poland',
     name: 'Poland',
     region: 'Europe',
@@ -20,13 +48,6 @@ export const DESTINATIONS: Destination[] = [
     region: 'Europe',
     summary: 'Permits for hospitality, tourism, and other hired roles, plus self-employed residence where it fits.',
     pathways: ['Employment-based work permits', 'Self-employed residence', 'Family reunification'],
-  },
-  {
-    slug: 'serbia',
-    name: 'Serbia',
-    region: 'Europe',
-    summary: 'Work, residence, and business routes for people starting activity in an emerging market.',
-    pathways: ['Work and residence permits', 'Business and investment stays', 'Founder setup alongside the permit'],
   },
   {
     slug: 'germany',
@@ -43,20 +64,6 @@ export const DESTINATIONS: Destination[] = [
     pathways: ['Skilled worker permits', 'Investor and founder routes where available', 'Permanent residence and family reunification'],
   },
   {
-    slug: 'canada',
-    name: 'Canada',
-    region: 'North America',
-    summary: 'Study, work, and permanent residence programmes, including routes that do not start with a job offer.',
-    pathways: ['Study permits', 'Work permits', 'Permanent residence programmes'],
-  },
-  {
-    slug: 'australia',
-    name: 'Australia',
-    region: 'Oceania',
-    summary: 'Skilled, student, and employer-sponsored visas, with permanent residence as a later step.',
-    pathways: ['Skilled migration', 'Student visas', 'Employer-sponsored work'],
-  },
-  {
     slug: 'united-kingdom',
     name: 'United Kingdom',
     region: 'Europe',
@@ -64,11 +71,25 @@ export const DESTINATIONS: Destination[] = [
     pathways: ['Student visas', 'Skilled Worker', 'Family and dependent visas'],
   },
   {
+    slug: 'canada',
+    name: 'Canada',
+    region: 'North America',
+    summary: 'Study, work, and permanent residence programmes, including routes that do not start with a job offer.',
+    pathways: ['Study permits', 'Work permits', 'Permanent residence programmes'],
+  },
+  {
     slug: 'united-states',
     name: 'United States',
     region: 'North America',
     summary: 'Visit, study, and employment-based visas. Each category has its own sponsor and evidence rules.',
     pathways: ['Visitor visas', 'Student visas', 'Employment-based petitions'],
+  },
+  {
+    slug: 'australia',
+    name: 'Australia',
+    region: 'Oceania',
+    summary: 'Skilled, student, and employer-sponsored visas, with permanent residence as a later step.',
+    pathways: ['Skilled migration', 'Student visas', 'Employer-sponsored work'],
   },
   {
     slug: 'new-zealand',

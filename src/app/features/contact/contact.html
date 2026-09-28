@@ -69,35 +69,40 @@
       }
     </form>
     <aside>
-      <h2>Offices</h2>
-      @for (office of offices(); track office.name) {
-        <p>
-          <strong>{{ office.name }}</strong>
-          {{ office.address }}
-        </p>
-      } @empty {
-        <p>-</p>
-      }
-      <h2>Call</h2>
-      @for (phone of phones(); track phone.href) {
-        <p>
-          <a [href]="phone.href">{{ phone.text }}</a>
-          <span>{{ phone.label }}</span>
-        </p>
-      } @empty {
-        <p>-</p>
-      }
-      <h2>Email</h2>
-      @for (email of emails(); track email.href) {
-        <p>
-          <a [href]="email.href">{{ email.text }}</a>
-          <span>{{ email.label }}</span>
-        </p>
-      } @empty {
-        <p>-</p>
-      }
-      @if (site.hours) {
-        <p>{{ site.hours }}</p>
+      @if (offices().length || phones().length || emails().length) {
+        @if (offices().length) {
+          <h2>Offices</h2>
+          @for (office of offices(); track office.name) {
+            <p>
+              <strong>{{ office.name }}</strong>
+              {{ office.address }}
+            </p>
+          }
+        }
+        @if (phones().length) {
+          <h2>Call</h2>
+          @for (phone of phones(); track phone.href) {
+            <p>
+              <a [href]="phone.href">{{ phone.text }}</a>
+              <span>{{ phone.label }}</span>
+            </p>
+          }
+        }
+        @if (emails().length) {
+          <h2>Email</h2>
+          @for (email of emails(); track email.href) {
+            <p>
+              <a [href]="email.href">{{ email.text }}</a>
+              <span>{{ email.label }}</span>
+            </p>
+          }
+        }
+        @if (site.hours) {
+          <p>{{ site.hours }}</p>
+        }
+      } @else {
+        <h2>Office and phone</h2>
+        <p>Office, phone, and email details are coming soon. Until then, the form is the fastest way to reach a consultant.</p>
       }
     </aside>
   </div>

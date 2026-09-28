@@ -90,6 +90,12 @@ img {
   padding: 4.5rem 0;
 }
 
+@media (max-width: 600px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
 .section-head {
   max-width: 38rem;
   margin-bottom: 2rem;

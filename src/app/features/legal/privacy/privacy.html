@@ -51,9 +51,16 @@
     <h2>Contact</h2>
     <p>
       {{ site.name }}<br />
-      Address: {{ site.address || '-' }}<br />
-      Phone: {{ site.phone || '-' }}<br />
-      Email: {{ site.email || '-' }}
+      @if (site.address) {
+        {{ site.address }}<br />
+      }
+      @if (site.phone) {
+        <a [href]="site.phoneHref">{{ site.phone }}</a><br />
+      }
+      @if (site.email) {
+        <a [href]="'mailto:' + site.email">{{ site.email }}</a><br />
+      }
+      Reach us through the <a routerLink="/contact">contact page</a>.
     </p>
     </article>
   </div>

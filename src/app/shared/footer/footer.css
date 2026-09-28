@@ -24,6 +24,10 @@ address {
   font-style: normal;
 }
 
+.legal {
+  align-items: center;
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -40,5 +44,18 @@ a:hover {
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  nav,
+  address {
+    gap: 0;
+  }
+
+  nav a,
+  address a,
+  .legal a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
   }
 }

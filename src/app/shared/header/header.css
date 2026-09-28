@@ -91,6 +91,9 @@ nav .btn-primary:hover {
   }
 
   nav a {
-    padding: 0.45rem 0.2rem;
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 0.2rem;
   }
 }

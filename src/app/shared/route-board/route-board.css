@@ -51,7 +51,9 @@ ul {
 
 a {
   display: inline-flex;
-  padding: 0.35rem 0.7rem;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 999px;
   background: var(--surface);
   color: var(--accent-dark);
