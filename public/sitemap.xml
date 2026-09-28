@@ -5,6 +5,7 @@
   <url><loc>https://crossbordermigration.example/services/student-visa</loc></url>
   <url><loc>https://crossbordermigration.example/services/work-visa</loc></url>
   <url><loc>https://crossbordermigration.example/services/family-visa</loc></url>
+  <url><loc>https://crossbordermigration.example/services/european-work-permits</loc></url>
   <url><loc>https://crossbordermigration.example/services/european-residency</loc></url>
   <url><loc>https://crossbordermigration.example/services/tourist-visa</loc></url>
   <url><loc>https://crossbordermigration.example/services/pr-citizenship</loc></url>
@@ -14,6 +15,9 @@
   <url><loc>https://crossbordermigration.example/destinations/poland</loc></url>
   <url><loc>https://crossbordermigration.example/destinations/croatia</loc></url>
   <url><loc>https://crossbordermigration.example/destinations/serbia</loc></url>
+  <url><loc>https://crossbordermigration.example/destinations/spain</loc></url>
+  <url><loc>https://crossbordermigration.example/destinations/czech-republic</loc></url>
+  <url><loc>https://crossbordermigration.example/destinations/bulgaria</loc></url>
   <url><loc>https://crossbordermigration.example/destinations/germany</loc></url>
   <url><loc>https://crossbordermigration.example/destinations/norway</loc></url>
   <url><loc>https://crossbordermigration.example/destinations/canada</loc></url>

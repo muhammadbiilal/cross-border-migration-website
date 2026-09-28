@@ -12,7 +12,7 @@
             <a class="btn btn-primary" routerLink="/contact">Free assessment</a>
           </div>
         </div>
-        <app-route-board [destinations]="destinations()" />
+        <app-route-board [destinations]="featured()" />
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
     </div>
     <div class="card-grid">
       @for (service of services(); track service.slug; let i = $index) {
-        <app-service-card [service]="service" [index]="i + 1" />
+        <app-service-card [service]="service" [index]="i + 1" [compact]="true" />
       }
     </div>
   </div>
@@ -63,11 +63,12 @@
       <h2>Destinations</h2>
       <p>Europe, North America, and Oceania. The route depends on the country, not a single global visa.</p>
     </div>
-    <div class="card-grid">
-      @for (destination of destinations(); track destination.slug) {
+    <div class="card-grid scroller">
+      @for (destination of featured(); track destination.slug) {
         <app-country-card [destination]="destination" />
       }
     </div>
+    <a class="btn btn-primary all" routerLink="/destinations">All {{ destinations().length }} destinations</a>
   </div>
 </section>
 
@@ -86,36 +87,6 @@
         </li>
       }
     </ol>
-  </div>
-</section>
-
-<section class="section reasons">
-  <div class="container">
-    <div class="section-head">
-      <h2>Why people stay with the file</h2>
-    </div>
-    <div class="card-grid">
-      @for (reason of reasons; track reason.title) {
-        <article>
-          <h3>{{ reason.title }}</h3>
-          <p>{{ reason.text }}</p>
-        </article>
-      }
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>What clients describe</h2>
-      <p>Sample notes until real reviews are added. They are not claimed case results.</p>
-    </div>
-    <div class="card-grid">
-      @for (item of testimonials(); track item.detail) {
-        <app-testimonial-card [quote]="item.quote" [name]="item.name" [detail]="item.detail" />
-      }
-    </div>
   </div>
 </section>
 

@@ -13,7 +13,12 @@
           <li>{{ pathway }}</li>
         }
       </ul>
-      <a class="btn btn-primary" routerLink="/contact">Check this country</a>
+      <div class="actions">
+        <a class="btn btn-primary" routerLink="/contact">Ask about {{ place.name }}</a>
+        @if (place.region === 'Europe') {
+          <a class="btn btn-ghost" routerLink="/services/european-work-permits">European work permits</a>
+        }
+      </div>
     </div>
   </section>
   <app-cta-band />
