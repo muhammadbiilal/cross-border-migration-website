@@ -6,6 +6,7 @@ import { ContentService } from '../../core/services/content.service';
 import { REASONS } from '../../core/data/site.data';
 import { CountryCard } from '../../shared/country-card/country-card';
 import { CtaBand } from '../../shared/cta-band/cta-band';
+import { EuropePermits } from '../../shared/europe-permits/europe-permits';
 import { FaqList } from '../../shared/faq-list/faq-list';
 import { RouteBoard } from '../../shared/route-board/route-board';
 import { ServiceCard } from '../../shared/service-card/service-card';
@@ -14,7 +15,7 @@ import { TestimonialCard } from '../../shared/testimonial-card/testimonial-card'
 @Component({
   selector: 'app-home',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, ServiceCard, CountryCard, FaqList, CtaBand, TestimonialCard, RouteBoard],
+  imports: [RouterLink, ServiceCard, CountryCard, FaqList, CtaBand, TestimonialCard, RouteBoard, EuropePermits],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

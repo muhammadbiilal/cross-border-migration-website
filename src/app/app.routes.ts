@@ -29,7 +29,7 @@ export const routes: Routes = [
       seo: {
         title: `Services | ${brand}`,
         description:
-          'Student, work, family, residency, visit, permanent residence, business, and skilled migration services.',
+          'Student, work, European work permit, family, residency, visit, permanent residence, business, and skilled migration services.',
       },
     } satisfies RouteSeoData,
   },

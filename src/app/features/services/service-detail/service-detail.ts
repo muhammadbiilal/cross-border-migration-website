@@ -4,12 +4,13 @@ import { Router, RouterLink } from '@angular/router';
 import { ContentService } from '../../../core/services/content.service';
 import { SeoService } from '../../../core/services/seo.service';
 import { CtaBand } from '../../../shared/cta-band/cta-band';
+import { EuropePermits } from '../../../shared/europe-permits/europe-permits';
 import { PageHero } from '../../../shared/page-hero/page-hero';
 
 @Component({
   selector: 'app-service-detail',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, PageHero, CtaBand],
+  imports: [RouterLink, PageHero, CtaBand, EuropePermits],
   templateUrl: './service-detail.html',
   styleUrl: './service-detail.css',
 })

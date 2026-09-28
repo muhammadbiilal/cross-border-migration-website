@@ -8,6 +8,17 @@ export interface ServiceItem {
 
 export const SERVICES: ServiceItem[] = [
   {
+    slug: 'european-work-permits',
+    title: 'European work permits',
+    summary: 'Work permits for Spain, Serbia, the Czech Republic, Bulgaria, and the rest of the Schengen area.',
+    lead: 'Each European country runs its own permit. We match your job offer or trade to the country that hires for it, then prepare the permit file for that system.',
+    points: [
+      'Country match for your job or trade',
+      'Employer, contract, and qualification documents',
+      'Permit filing, visa appointment, and residence card after arrival',
+    ],
+  },
+  {
     slug: 'student-visa',
     title: 'Student visa',
     summary: 'Admissions, funds evidence, and the visa file for study abroad.',

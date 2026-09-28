@@ -37,13 +37,24 @@
   <div class="container">
     <div class="section-head">
       <h2>Services</h2>
-      <p>Eight pathways. Each page lists what we prepare and what we do not promise.</p>
+      <p>Pick a pathway to see what we prepare for your file.</p>
     </div>
     <div class="card-grid">
       @for (service of services(); track service.slug; let i = $index) {
         <app-service-card [service]="service" [index]="i + 1" />
       }
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">European work permits</p>
+      <h2>Spain, Serbia, Czech Republic, Bulgaria</h2>
+      <p>Our busiest permit countries this year, plus work permits across the rest of the Schengen area.</p>
+    </div>
+    <app-europe-permits />
   </div>
 </section>
 
