@@ -61,7 +61,7 @@ export class Contact {
 
     if (!this.configured) {
       this.status.set('failed');
-      this.error.set(`The form is not connected yet. Email ${this.site.email} instead.`);
+      this.error.set('The form is not connected yet. Please try again later.');
       return;
     }
 

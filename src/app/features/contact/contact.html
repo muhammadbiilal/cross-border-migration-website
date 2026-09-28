@@ -75,6 +75,8 @@
           <strong>{{ office.name }}</strong>
           {{ office.address }}
         </p>
+      } @empty {
+        <p>-</p>
       }
       <h2>Call</h2>
       @for (phone of phones(); track phone.href) {
@@ -82,6 +84,8 @@
           <a [href]="phone.href">{{ phone.text }}</a>
           <span>{{ phone.label }}</span>
         </p>
+      } @empty {
+        <p>-</p>
       }
       <h2>Email</h2>
       @for (email of emails(); track email.href) {
@@ -89,8 +93,12 @@
           <a [href]="email.href">{{ email.text }}</a>
           <span>{{ email.label }}</span>
         </p>
+      } @empty {
+        <p>-</p>
       }
-      <p>{{ site.hours }}</p>
+      @if (site.hours) {
+        <p>{{ site.hours }}</p>
+      }
     </aside>
   </div>
 </section>

@@ -69,8 +69,8 @@ export class SeoService {
       name: SITE.name,
       url: environment.siteUrl,
       description: seo.description,
-      email: SITE.email,
-      telephone: SITE.phone,
+      ...(SITE.email ? { email: SITE.email } : {}),
+      ...(SITE.phone ? { telephone: SITE.phone } : {}),
       image: `${environment.siteUrl}/og.svg`,
       mainEntityOfPage: canonical,
     };
